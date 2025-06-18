@@ -87,10 +87,6 @@ body {
 
 /* Remove bullets and style nav links in header */
 
-a:hover {
-  color: #000; /* change to any color you want on hover */
-}
-
 #header nav ul li a:hover {
   color: #000; /* change to any color you want on hover */
 }
@@ -184,7 +180,7 @@ header nav ul li {
 
 		a:hover {
 			border-bottom-color: transparent;
-			color: #49bf9d !important;
+			color: #178f6c !important;
 			text-decoration: none;
 		}
 
