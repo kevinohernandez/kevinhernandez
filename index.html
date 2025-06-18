@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+f<!DOCTYPE HTML>
 <html>
 <head>
 	<title>Kevin Hernandez</title>
@@ -139,6 +139,30 @@
 			});
 		});
 	</script>
+<!-- Scroll spy script -->
+   	 <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const sections = document.querySelectorAll("#motion, #images, #product");
+        const navLinks = document.querySelectorAll("#header nav ul li a");
 
+        window.addEventListener("scroll", () => {
+          let current = "";
+          sections.forEach(section => {
+            const sectionTop = section.offsetTop - 100;
+            const sectionHeight = section.clientHeight;
+            if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+              current = section.getAttribute("id");
+            }
+          });
+
+          navLinks.forEach(link => {
+            link.classList.remove("active");
+            if (link.getAttribute("href") === `#${current}`) {
+              link.classList.add("active");
+            }
+          });
+        });
+      });
+   	 </script>
 </body>
 </html>
