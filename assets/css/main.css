@@ -180,7 +180,7 @@ header nav ul li {
 
 		a:hover {
 			border-bottom-color: transparent;
-			color: #178f6c !important;
+			color: #000 !important;
 			text-decoration: none;
 		}
 
