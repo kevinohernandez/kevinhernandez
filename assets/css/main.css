@@ -1,12 +1,6 @@
 @import url("fontawesome-all.min.css");
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic");
 
-/*
-	Strata by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -2546,6 +2540,7 @@ header nav ul li {
 		/max-width: 54em;
 		/padding: 8em 4em 4em 4em;
 		width: calc(100% - 20%);
+		border-left: 2.5px solid #000000;
 	}
 
 		#main > section {
