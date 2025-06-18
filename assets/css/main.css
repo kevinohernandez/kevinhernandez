@@ -103,6 +103,8 @@ header nav ul {
 	justify-content: center;
 	flex-direction: column;
 	text-transform: uppercase;
+	white-space: nowrap;
+	justify-items: anchor-center;
 }
 
 header nav ul li {
