@@ -1,4 +1,4 @@
-f<!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <html>
 <head>
 	<title>Kevin Hernandez</title>
@@ -9,6 +9,9 @@ f<!DOCTYPE HTML>
 	<style>
 		html {
 			scroll-behavior: smooth;
+		}
+		#header nav ul li a.active {
+			color: #f00; /* Change this color to what you'd like for the active link */
 		}
 	</style>
 </head>
@@ -125,7 +128,7 @@ f<!DOCTYPE HTML>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
 	<script>
-		// Ensure poptrox is initialized on all .gallery containers
+		// Poptrox initialization
 		$(function() {
 			$('.gallery').poptrox({
 				caption: function($a) { return $a.find('.caption').text(); },
@@ -135,34 +138,32 @@ f<!DOCTYPE HTML>
 				popupLoaderText: '',
 				selector: 'a',
 				usePopupCaption: true,
-				//usePopupNav: true
+			});
+		});
+
+		// Scroll spy for nav link highlight
+		document.addEventListener("DOMContentLoaded", function () {
+			const sections = document.querySelectorAll("#section-3d, #section-images, #section-product");
+			const navLinks = document.querySelectorAll("#header nav ul li a");
+
+			window.addEventListener("scroll", () => {
+				let current = "";
+				sections.forEach(section => {
+					const sectionTop = section.offsetTop - 100;
+					const sectionHeight = section.clientHeight;
+					if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+						current = section.getAttribute("id");
+					}
+				});
+
+				navLinks.forEach(link => {
+					link.classList.remove("active");
+					if (link.getAttribute("href") === `#${current}`) {
+						link.classList.add("active");
+					}
+				});
 			});
 		});
 	</script>
-<!-- Scroll spy script -->
-   	 <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const sections = document.querySelectorAll("#motion, #images, #product");
-        const navLinks = document.querySelectorAll("#header nav ul li a");
-
-        window.addEventListener("scroll", () => {
-          let current = "";
-          sections.forEach(section => {
-            const sectionTop = section.offsetTop - 100;
-            const sectionHeight = section.clientHeight;
-            if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-              current = section.getAttribute("id");
-            }
-          });
-
-          navLinks.forEach(link => {
-            link.classList.remove("active");
-            if (link.getAttribute("href") === `#${current}`) {
-              link.classList.add("active");
-            }
-          });
-        });
-      });
-   	 </script>
 </body>
 </html>
