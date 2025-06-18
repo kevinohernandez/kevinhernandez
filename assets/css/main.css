@@ -2029,7 +2029,7 @@ header nav ul li {
 			}
 
 			.image.avatar img {
-				border-radius: 100%;
+				/border-radius: 100%;
 				width: 100%;
 			}
 
