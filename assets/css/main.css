@@ -76,18 +76,21 @@ input, select, textarea {
 
 /* Remove bullets and style nav links in header */
 
+a:hover {
+  color: #000; /* change to any color you want on hover */
+}
+
 #header nav ul li a:hover {
-  color: #ff6600; /* change to any color you want on hover */
+  color: #000; /* change to any color you want on hover */
 }
 
 #header nav ul li a {
   text-decoration: none;
-  color: inherit;
   transition: color 0.3s ease;
 }
 
 #header nav ul li a.active {
-  color: #ff6600; /* or any highlight color */
+  color: #000; /* or any highlight color */
 }
 
 header nav ul {
