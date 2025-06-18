@@ -2625,7 +2625,8 @@ header nav ul li {
 /* Work Item */
 
 	.work-item {
-		margin: 0 0 2em 0;
+		/margin: 0 0 2em 0;
+		margin: 0 0 0em 0;
 	}
 
 		.work-item .image {
