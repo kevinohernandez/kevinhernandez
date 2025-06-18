@@ -2464,7 +2464,7 @@ header nav ul li {
 
 /* Header */
 
-	 {
+	#header {
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: -ms-flex;
