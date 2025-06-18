@@ -75,6 +75,16 @@ input, select, textarea {
 /* Basic */
 
 /* Remove bullets and style nav links in header */
+#header nav ul li a {
+  text-decoration: none; /* removes underline/dash */
+  color: inherit; /* keeps the original color */
+  transition: color 0.3s ease;
+}
+
+#header nav ul li a:hover {
+  color: #ff6600; /* change to any color you want on hover */
+}
+
 header nav ul {
 	list-style: none;
 	padding: 0;
