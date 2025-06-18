@@ -146,7 +146,8 @@ header nav ul li {
 	}
 
 	body {
-		background: #fff;
+		/background: #fff;
+		background:#94978B;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -2661,7 +2662,8 @@ header nav ul li {
 		-webkit-justify-content: space-between;
 		-ms-justify-content: space-between;
 		justify-content: space-between;
-		background-color: #fff;
+		/background-color: #fff;
+		background-color:#94978B;
 		background-attachment: scroll,								scroll;
 		/background-image: url("images/overlay.png"), url("../../images/bg.jpg");
 		background-position: top left,							top left;
