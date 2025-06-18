@@ -1790,11 +1790,12 @@ header nav ul li {
 
 		.row {
 			margin-top: 0;
-			margin-left: -2.5em;
+			/margin-left: -2.5em;
 		}
 
 			.row > * {
-				padding: 0 0 0 2.5em;
+				/padding: 0 0 0 2.5em;
+				padding: 0 0 0 0em;
 			}
 
 			.row.gtr-uniform {
@@ -2033,11 +2034,12 @@ header nav ul li {
 
 				.row {
 					margin-top: 0;
-					margin-left: -2.5em;
+					/margin-left: -2.5em;
 				}
 
 					.row > * {
-						padding: 0 0 0 2.5em;
+						/padding: 0 0 0 2.5em;
+						padding: 0 0 0 0em;
 					}
 
 					.row.gtr-uniform {
