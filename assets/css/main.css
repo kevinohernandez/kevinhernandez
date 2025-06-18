@@ -1786,7 +1786,7 @@ header nav ul li {
 
 			.row > * {
 				/padding: 0 0 0 2.5em;
-				padding: 0 0 0 0em;
+				padding: 0 0 0 1em;
 			}
 
 			.row.gtr-uniform {
@@ -2030,7 +2030,7 @@ header nav ul li {
 
 					.row > * {
 						/padding: 0 0 0 2.5em;
-						padding: 0 0 0 0em;
+						padding: 0 0 0 1em;
 					}
 
 					.row.gtr-uniform {
