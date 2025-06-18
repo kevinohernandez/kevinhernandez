@@ -2247,6 +2247,7 @@ header nav ul li {
 		list-style: none;
 		padding-left: 0;
 		margin: 0;
+		display: none;
 	}
 
 		ul.icons li {
