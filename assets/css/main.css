@@ -192,6 +192,11 @@ header nav ul li {
 	h2 {
 		font-size: 1.5em;
 		line-height: 1.5em;
+		display: flex;
+    		align-content: stretch;
+    		flex-direction: row-reverse;
+    		justify-content: space-between;
+}
 	}
 
 	h3 {
