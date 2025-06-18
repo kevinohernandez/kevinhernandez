@@ -85,7 +85,7 @@ body {
   scrollbar-width: none;  /* Firefox */
 }
 
-/* Remove bullets and style nav links in header */
+/* Remove bullets and style nav links in  */
 
  nav ul li a:hover {
   color: #000; /* change to any color you want on hover */
@@ -2516,7 +2516,7 @@ header nav ul li {
 
 		 strong,  b {
 			color: #000;
-			 display: none;
+			 /display: none;
 		}
 
 		#header h2, #header h3, #header h4, #header h5, #header h6 {
