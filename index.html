@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
   <link rel="icon" type="image/svg+xml" href="images/outlinever-01.svg" />
   <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
   <style>
     /nav {display:none}
     .inner {
@@ -110,6 +112,10 @@
       svg.icon {
         margin: 0 0 4px 0;
       }
+	    
+    .swiper { padding-bottom: 40px; }
+    .swiper-button-next, .swiper-button-prev { color: #000; }
+	    
     }
   </style>
 </head>
@@ -231,6 +237,7 @@
     </ul>
   </nav>
 
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>	
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/jquery.poptrox.min.js"></script>
   <script src="assets/js/browser.min.js"></script>
@@ -265,6 +272,9 @@
           link.classList.remove("active");
           if (link.getAttribute("href") === `#${current}`) {
             link.classList.add("active");
+
+		  
+		  
           }
         });
       });
