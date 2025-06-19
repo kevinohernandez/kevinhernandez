@@ -956,6 +956,7 @@ header nav ul li {
 
 			#header {
 				/padding: 4.5em 1.5em;
+				display: none;
 			}
 
 				#header h1 br {
