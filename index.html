@@ -6,130 +6,269 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
   <link rel="icon" type="image/svg+xml" href="images/outlinever-01.svg" />
   <link rel="stylesheet" href="assets/css/main.css" />
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <style>
     /nav {display:none}
-    .inner { padding-top: 10px; justify-items: anchor-center; }
-    html, body { overscroll-behavior: none; }
-    html { scroll-behavior: smooth; }
-    #header nav ul li a.active { color: #000; }
-    body::-webkit-scrollbar { display: none; }
-    body { -ms-overflow-style: none; scrollbar-width: auto; }
-    .poptrox-overlay .poptrox-caption, .thumb::after { display: none !important; }
-    nav.navbar-side { text-transform: capitalize; font-size: 14px; font-weight: 400; }
-    .navbar-nav { list-style: none; margin: 0; padding: 0; }
-    .navbar-nav li { margin: 0; padding: 0; }
-    .navbar-nav .nav-link { color: #fff; display: flex; align-items: center; justify-content: center; padding: 10px; flex-direction: row; text-align: center; }
-    .navbar-nav .nav-link.active, .navbar-nav .nav-link.show { color: #000000; }
-    a.nav-link:focus, a.nav-link:hover { color: #000000; }
-    svg.icon { width: 24px; height: 24px; margin: 0 6px 0 0; fill: currentColor; }
+    .inner {
+	    padding-top: 10px;
+	    justify-items: anchor-center;
+	   }  
+    html, body {
+      overscroll-behavior: none;
+    }   
+    html {
+      scroll-behavior: smooth;
+    }
+    #header nav ul li a.active {
+      color: #000;
+    }
+    body::-webkit-scrollbar {
+      display: none;
+    }
+    body {
+      -ms-overflow-style: none;
+      scrollbar-width: auto;
+    }
+    .poptrox-overlay .poptrox-caption,
+    .thumb::after {
+      display: none !important;
+    }
+    nav.navbar-side {
+      text-transform: capitalize;
+      font-size: 14px;
+      font-weight: 400;
+    }
+    .navbar-nav {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .navbar-nav li {
+      margin: 0;
+      padding: 0;
+    }
+    .navbar-nav .nav-link {
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      flex-direction: row;
+      text-align: center;
+    }
+    .navbar-nav .nav-link.active,
+    .navbar-nav .nav-link.show {
+      color: #000000;
+    }
+    a.nav-link:focus,
+    a.nav-link:hover {
+      color: #000000;
+    }
+    svg.icon {
+      width: 24px;
+      height: 24px;
+      margin: 0 6px 0 0;
+      fill: currentColor;
+    }
     @media (min-width: 991px) {
-      nav.navbar-side { position: fixed; top: 50%; right: 1rem; transform: translateY(-50%); background: #ffffff7a; border-radius: 50px; padding: 10px; font-variant: all-petite-caps; display: none; }
-      .navbar-nav { display: flex; flex-direction: column; gap: 10px; }
+      nav.navbar-side {
+        position: fixed;
+        top: 50%;
+        right: 1rem;
+        transform: translateY(-50%);
+        background: #ffffff7a;
+        border-radius: 50px;
+        padding: 10px;
+        font-variant: all-petite-caps;
+        display: none;
+      }
+      .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
     }
     @media (max-width: 991px) {
-      nav.navbar-side { background: #ffffff7a; position: fixed; bottom: 0; width: 100%; display: flex; justify-content: space-evenly; padding: 10px 0; font-variant: all-petite-caps; }
-      .navbar-nav { flex-direction: row; width: 100%; justify-content: space-evenly; display: flex; }
-      .navbar-nav .nav-link { flex-direction: column; }
-      svg.icon { margin: 0 0 4px 0; }
+      nav.navbar-side {
+        background: #ffffff7a;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        padding: 10px 0;
+        font-variant: all-petite-caps;
+      }
+      .navbar-nav {
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-evenly;
+        display: flex;
+      }
+      .navbar-nav .nav-link {
+        flex-direction: column;
+      }
+      svg.icon {
+        margin: 0 0 4px 0;
+      }
     }
-    .swiper { padding-bottom: 40px; }
-    .swiper-button-next, .swiper-button-prev { color: #000; }
   </style>
 </head>
 <body class="is-preload">
 
-<header id="header">
-  <div class="inner">
-    <a href="#" class="image avatar">
-      <!-- Your SVG -->
-      <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 288 432">
-        <defs>
-          <style>.cls-1 { fill: #0000; stroke: #000; stroke-miterlimit: 10; }</style>
-        </defs>
-        <path class="cls-1" d="M277.11,215.59c-36.07,1.79-67.23,14.8-92.89,40.14-25.57,25.26-39.13,56.09-41.67,92.01-2.4-35.34-15.78-65.89-40.66-90.99-24.95-25.16-55.48-38.68-91-41.02,77.65-10.29,120.29-55.11,131.85-131.47,4.23,34.86,16.31,66.26,41.88,91.19,25.64,25.01,57.38,36.37,92.5,40.14Z"/>
-      </svg>
-    </a>
-  </div>
-</header>
-
-<div id="main">
-
-  <section id="section-3d">
-    <div class="swiper">
-      <div class="swiper-wrapper">
-        <!-- Each work-item becomes a swiper-slide -->
-        <div class="swiper-slide work-item"><a href="images/fulls/01.jpg" class="image fit thumb"><img src="images/thumbs/01.jpg" alt="" /><span class="caption">Magna sed consequat tempus</span></a></div>
-        <div class="swiper-slide work-item"><a href="images/fulls/02.jpg" class="image fit thumb"><img src="images/thumbs/02.jpg" alt="" /><span class="caption">Ultricies lacinia interdum</span></a></div>
-        <div class="swiper-slide work-item"><a href="images/fulls/03.jpg" class="image fit thumb"><img src="images/thumbs/03.jpg" alt="" /><span class="caption">Tortor metus commodo</span></a></div>
-        <div class="swiper-slide work-item"><a href="images/fulls/04.jpg" class="image fit thumb"><img src="images/thumbs/04.jpg" alt="" /><span class="caption">Quam neque phasellus</span></a></div>
-        <div class="swiper-slide work-item"><a href="images/fulls/05.jpg" class="image fit thumb"><img src="images/thumbs/05.jpg" alt="" /><span class="caption">Nunc enim commodo aliquet</span></a></div>
-        <div class="swiper-slide work-item"><a href="images/fulls/06.jpg" class="image fit thumb"><img src="images/thumbs/06.jpg" alt="" /><span class="caption">Risus ornare lacinia</span></a></div>
-      </div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
+  <header id="header">
+    <div class="inner">
+      <a href="#" class="image avatar">
+        <!-- Replace image with inline SVG -->
+       <?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 288 432">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #0000;
+        stroke: #000;
+        stroke-miterlimit: 10;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="M277.11,215.59c-36.07,1.79-67.23,14.8-92.89,40.14-25.57,25.26-39.13,56.09-41.67,92.01-2.4-35.34-15.78-65.89-40.66-90.99-24.95-25.16-55.48-38.68-91-41.02,77.65-10.29,120.29-55.11,131.85-131.47,4.23,34.86,16.31,66.26,41.88,91.19,25.64,25.01,57.38,36.37,92.5,40.14Z"/>
+  <g>
+    <path d="M112.33,204.94l30.1-29.94h-10.65l-38.85,38.96v-31.22c-.27,.3-.54,.6-.85,.86-1.15,.96-2.45,1.66-3.77,2.33-.09,.17-.2,.33-.33,.47-1,1-2.03,1.97-3.13,2.86v53.23s.06,.04,.08,.06c.18,.13,.35,.26,.51,.4,.15,.12,.28,.27,.41,.42,.28,.15,.55,.31,.81,.48,.65,.42,1.26,.9,1.8,1.44,0,0,.02,.01,.03,.02,.87,.56,1.71,1.22,2.48,1.94,.69,.4,1.34,.84,1.96,1.32v-24.21l13.77-13.55,27.32,40.43h10.27l-31.96-46.28Z"/>
+    <path d="M199.19,243.36s.03,0,.05,0c.05-.03,.09-.06,.14-.08v-55.69c-.15-.09-.26-.23-.33-.38-.15-.11-.23-.27-.29-.44-.41-.04-.67-.29-.77-.6-.13-.07-.24-.16-.34-.27-.05-.02-.09-.06-.14-.09-.23-.05-.41-.16-.53-.32-.23-.1-.39-.28-.47-.51-.53-.34-1.03-.72-1.5-1.13-.21-.18-.24-.22-.38-.31-.24-.16-.47-.33-.7-.49-.47-.34-.95-.69-1.36-1.1,0,0,0,0-.01-.01-.57-.05-.94-.38-1.12-.8-.05,0-.11,0-.16-.02v27.03h-41.47v-33.16h-8.09v76.22h8.09v-35.84h41.47v33.14c.07-.08,.13,.84,.21,.77,.75-.7,1.73-2.06,2.69-2.34,0,0,0,0,0,0,.29-.39,.74-.67,1.34-.72,.13-.15,.29-.27,.46-.37,.18-.67,.66-1.25,1.45-1.4,.29-.61,.86-1.08,1.74-1.08Z"/>
+  </g>
+</svg>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="#section-3d">3D/Motion Graphics</a></li>
+          <li><a href="#section-typography">Typography</a></li>
+          <li><a href="#section-product">Product Design</a></li>
+        </ul>
+      </nav>
     </div>
-  </section>
+  </header>
 
-  <section id="section-typography">
-    <div class="swiper">
-      <div class="swiper-wrapper">
-        <!-- Repeat structure for typography -->
-        <div class="swiper-slide work-item"><a href="images/fulls/01.jpg" class="image fit thumb"><img src="images/thumbs/01.jpg" alt="" /><span class="caption">Placeholder caption</span></a></div>
-        <div class="swiper-slide work-item"><a href="images/fulls/02.jpg" class="image fit thumb"><img src="images/thumbs/02.jpg" alt="" /><span class="caption">Placeholder caption</span></a></div>
-        <div class="swiper-slide work-item"><a href="images/fulls/03.jpg" class="image fit thumb"><img src="images/thumbs/03.jpg" alt="" /><span class="caption">Placeholder caption</span></a></div>
-        <div class="swiper-slide work-item"><a href="images/fulls/04.jpg" class="image fit thumb"><img src="images/thumbs/04.jpg" alt="" /><span class="caption">Placeholder caption</span></a></div>
-        <div class="swiper-slide work-item"><a href="images/fulls/05.jpg" class="image fit thumb"><img src="images/thumbs/05.jpg" alt="" /><span class="caption">Placeholder caption</span></a></div>
-        <div class="swiper-slide work-item"><a href="images/fulls/06.jpg" class="image fit thumb"><img src="images/thumbs/06.jpg" alt="" /><span class="caption">Placeholder caption</span></a></div>
-      </div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-    </div>
-  </section>
+  <div id="main">
 
-  <section id="section-product">
-    <div class="swiper">
-      <div class="swiper-wrapper">
-        <!-- Repeat structure for product -->
-        <div class="swiper-slide work-item"><a href="images/fulls/01.jpg" class="image fit thumb"><img src="images/thumbs/01.jpg" alt="" /><span class="caption">Placeholder caption</span></a></div>
-        <div class="swiper-slide work-item"><a href="images/fulls/02.jpg" class="image fit thumb"><img src="images/thumbs/02.jpg" alt="" /><span class="caption">Placeholder caption</span></a></div>
-        <div class="swiper-slide work-item"><a href="images/fulls/03.jpg" class="image fit thumb"><img src="images/thumbs/03.jpg" alt="" /><span class="caption">Placeholder caption</span></a></div>
-        <div class="swiper-slide work-item"><a href="images/fulls/04.jpg" class="image fit thumb"><img src="images/thumbs/04.jpg" alt="" /><span class="caption">Placeholder caption</span></a></div>
-        <div class="swiper-slide work-item"><a href="images/fulls/05.jpg" class="image fit thumb"><img src="images/thumbs/05.jpg" alt="" /><span class="caption">Placeholder caption</span></a></div>
-        <div class="swiper-slide work-item"><a href="images/fulls/06.jpg" class="image fit thumb"><img src="images/thumbs/06.jpg" alt="" /><span class="caption">Placeholder caption</span></a></div>
-      </div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-    </div>
-  </section>
+		<section id="section-3d">
+			<div class="row gallery">
+				<article class="col-6 col-12-xsmall work-item">
+					<a href="images/fulls/01.jpg" class="image fit thumb"><img src="images/thumbs/01.jpg" alt="" /><span class="caption">Magna sed consequat tempus</span></a>
+				</article>
+				<article class="col-6 col-12-xsmall work-item">
+					<a href="images/fulls/02.jpg" class="image fit thumb"><img src="images/thumbs/02.jpg" alt="" /><span class="caption">Ultricies lacinia interdum</span></a>
+				</article>
+				<article class="col-6 col-12-xsmall work-item">
+					<a href="images/fulls/03.jpg" class="image fit thumb"><img src="images/thumbs/03.jpg" alt="" /><span class="caption">Tortor metus commodo</span></a>
+				</article>
+				<article class="col-6 col-12-xsmall work-item">
+					<a href="images/fulls/04.jpg" class="image fit thumb"><img src="images/thumbs/04.jpg" alt="" /><span class="caption">Quam neque phasellus</span></a>
+				</article>
+				<article class="col-6 col-12-xsmall work-item">
+					<a href="images/fulls/05.jpg" class="image fit thumb"><img src="images/thumbs/05.jpg" alt="" /><span class="caption">Nunc enim commodo aliquet</span></a>
+				</article>
+				<article class="col-6 col-12-xsmall work-item">
+					<a href="images/fulls/06.jpg" class="image fit thumb"><img src="images/thumbs/06.jpg" alt="" /><span class="caption">Risus ornare lacinia</span></a>
+				</article>
+			</div>
+		</section>
 
-</div>
+		<section id="section-typography">
+			<div class="row gallery">
+				<article class="col-6 col-12-xsmall work-item">
+					<a href="images/fulls/01.jpg" class="image fit thumb"><img src="images/thumbs/01.jpg" alt="" /><span class="caption">Placeholder caption</span></a>
+				</article>
+				<article class="col-6 col-12-xsmall work-item">
+					<a href="images/fulls/02.jpg" class="image fit thumb"><img src="images/thumbs/02.jpg" alt="" /><span class="caption">Placeholder caption</span></a>
+				</article>
+				<article class="col-6 col-12-xsmall work-item">
+					<a href="images/fulls/03.jpg" class="image fit thumb"><img src="images/thumbs/03.jpg" alt="" /><span class="caption">Placeholder caption</span></a>
+				</article>
+				<article class="col-6 col-12-xsmall work-item">
+					<a href="images/fulls/04.jpg" class="image fit thumb"><img src="images/thumbs/04.jpg" alt="" /><span class="caption">Placeholder caption</span></a>
+				</article>
+				<article class="col-6 col-12-xsmall work-item">
+					<a href="images/fulls/05.jpg" class="image fit thumb"><img src="images/thumbs/05.jpg" alt="" /><span class="caption">Placeholder caption</span></a>
+				</article>
+				<article class="col-6 col-12-xsmall work-item">
+					<a href="images/fulls/06.jpg" class="image fit thumb"><img src="images/thumbs/06.jpg" alt="" /><span class="caption">Placeholder caption</span></a>
+				</article>
+			</div>
+		</section>
 
-<nav class="navbar-side">
-  <!-- Keep your nav -->
-</nav>
+		<section id="section-product">
+			<div class="row gallery">
+				<article class="col-6 col-12-xsmall work-item">
+					<a href="images/fulls/01.jpg" class="image fit thumb"><img src="images/thumbs/01.jpg" alt="" /><span class="caption">Placeholder caption</span></a>
+				</article>
+				<article class="col-6 col-12-xsmall work-item">
+					<a href="images/fulls/02.jpg" class="image fit thumb"><img src="images/thumbs/02.jpg" alt="" /><span class="caption">Placeholder caption</span></a>
+				</article>
+				<article class="col-6 col-12-xsmall work-item">
+					<a href="images/fulls/03.jpg" class="image fit thumb"><img src="images/thumbs/03.jpg" alt="" /><span class="caption">Placeholder caption</span></a>
+				</article>
+				<article class="col-6 col-12-xsmall work-item">
+					<a href="images/fulls/04.jpg" class="image fit thumb"><img src="images/thumbs/04.jpg" alt="" /><span class="caption">Placeholder caption</span></a>
+				</article>
+				<article class="col-6 col-12-xsmall work-item">
+					<a href="images/fulls/05.jpg" class="image fit thumb"><img src="images/thumbs/05.jpg" alt="" /><span class="caption">Placeholder caption</span></a>
+				</article>
+				<article class="col-6 col-12-xsmall work-item">
+					<a href="images/fulls/06.jpg" class="image fit thumb"><img src="images/thumbs/06.jpg" alt="" /><span class="caption">Placeholder caption</span></a>
+				</article>
+			</div>
+		</section>
 
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll(".swiper").forEach(swiperEl => {
-      new Swiper(swiperEl, {
-        slidesPerView: 1,
-        spaceBetween: 10,
-        navigation: {
-          nextEl: swiperEl.querySelector('.swiper-button-next'),
-          prevEl: swiperEl.querySelector('.swiper-button-prev'),
-        },
-        breakpoints: {
-          992: {
-            slidesPerView: 2,
-            spaceBetween: 20
-          }
-        }
+	</div>
+
+  <nav class="navbar-side">
+    <ul class="navbar-nav">
+      <li><a href="#section-3d" class="nav-link"><svg class="icon" viewBox="0 0 24 24"><path d="M3 12l9-9 9 9-1.5 1.5L12 4.5 4.5 13.5z"/></svg><span>3D</span></a></li>
+      <li><a href="#section-typography" class="nav-link"><svg class="icon" viewBox="0 0 24 24"><path d="M21 19V5H3v14h18zm0-16c1.1 0 2 .9 2 2v14c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V5c0-1.1.9-2 2-2h18z"/></svg><span>Typography</span></a></li>
+      <li><a href="#section-product" class="nav-link"><svg class="icon" viewBox="0 0 24 24"><path d="M12 2l10 9h-5v11H7V11H2z"/></svg><span>Product</span></a></li>
+      <li><a href="#about" class="nav-link"><svg class="icon" viewBox="0 0 24 24"><path d="M12 12c2.7 0 5-2.3 5-5s-2.3-5-5-5-5 2.3-5 5 2.3 5 5 5zm0 2c-3.3 0-10 1.7-10 5v3h20v-3c0-3.3-6.7-5-10-5z"/></svg><span>About</span></a></li>
+      <li><a href="#contact" class="nav-link"><svg class="icon" viewBox="0 0 24 24"><path d="M21 8V7l-3 2-2-2-4 4-4-4-2 2-3-2v1l3 2-3 2v1l3-2 2 2 4-4 4 4 2-2 3 2v-1l-3-2 3-2z"/></svg><span>Contact</span></a></li>
+      <li><a href="#blog" class="nav-link"><svg class="icon" viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/></svg><span>Blog</span></a></li>
+    </ul>
+  </nav>
+
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.poptrox.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    $(function() {
+      $('.gallery').poptrox({
+        caption: function($a) { return $a.find('.caption').text(); },
+        overlayColor: '#000',
+        overlayOpacity: 0.7,
+        popupCloserText: '',
+        popupLoaderText: '',
+        selector: 'a',
+        usePopupCaption: true,
       });
     });
-  });
-</script>
-
+    document.addEventListener("DOMContentLoaded", function () {
+      const sections = document.querySelectorAll("#section-3d, #section-typography, #section-product");
+      const navLinks = document.querySelectorAll("#header nav ul li a, .navbar-side .nav-link");
+      window.addEventListener("scroll", () => {
+        let current = "";
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop - 100;
+          const sectionHeight = section.clientHeight;
+          if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+            current = section.getAttribute("id");
+          }
+        });
+        navLinks.forEach(link => {
+          link.classList.remove("active");
+          if (link.getAttribute("href") === `#${current}`) {
+            link.classList.add("active");
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
