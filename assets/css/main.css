@@ -441,6 +441,7 @@ header nav ul li {
 		/padding: 8em 4em 4em 4em;
 		width: calc(100% - 20%);
 		border-left: 2.5px solid #000000;
+		border: ridge;
 	}
 
 		#main > section {
