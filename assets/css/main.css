@@ -440,7 +440,7 @@ header nav ul li {
 		/max-width: 54em;
 		/padding: 8em 4em 4em 4em;
 		width: calc(100% - 20%);
-		border-left: 2.5px solid #000000;
+		/border-left: 2.5px solid #000000;
 		border: ridge;
 	}
 
