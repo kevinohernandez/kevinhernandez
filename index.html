@@ -7,40 +7,41 @@
   <link rel="icon" type="image/png" href="images/LOGO-REVERSE.png" />
   <link rel="stylesheet" href="assets/css/main.css" />
   <style>
-    html {
-      scroll-behavior: smooth;
+    html, body {
       overscroll-behavior: none;
     }
-    body {
-      -ms-overflow-style: none;
-      scrollbar-width: auto;
-      overscroll-behavior: none;
-      margin: 0;
-      padding: 0;
+    html {
+      scroll-behavior: smooth;
+    }
+    #header nav ul li a.active {
+      color: #000;
     }
     body::-webkit-scrollbar {
       display: none;
     }
-    #header nav ul li a.active {
-      color: #000;
+    body {
+      -ms-overflow-style: none;
+      scrollbar-width: auto;
+      margin: 0;
+      padding: 0;
     }
     .poptrox-overlay .poptrox-caption,
     .thumb::after {
       display: none !important;
     }
 
-    /* Top bar styles */
+    /* Top Bar */
     .top-bar {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       display: flex;
+      align-items: center;
+      height: 50px;
       background: #0C0930;
       color: #fff;
       z-index: 9999;
-      height: 50px;
-      align-items: center;
       padding: 0 10px;
     }
     .top-bar .logo {
@@ -51,14 +52,18 @@
     }
     .top-bar .section-title {
       width: 70%;
-      font-size: 18px;
       text-align: right;
       padding-right: 10px;
+      font-size: 16px;
       opacity: 1;
       transition: opacity 0.6s ease;
     }
 
-    /* Nav bar styles */
+    /* Offset main for top bar */
+    #main {
+      padding-top: 60px;
+    }
+
     nav.navbar-side {
       text-transform: capitalize;
       font-size: 14px;
@@ -84,11 +89,11 @@
     }
     .navbar-nav .nav-link.active,
     .navbar-nav .nav-link.show {
-      color: #FF3F2E;
+      color: #000000;
     }
     a.nav-link:focus,
     a.nav-link:hover {
-      color: #FF3F2E;
+      color: #000000;
     }
     svg.icon {
       width: 24px;
@@ -96,14 +101,13 @@
       margin: 0 6px 0 0;
       fill: currentColor;
     }
-
     @media (min-width: 991px) {
       nav.navbar-side {
         position: fixed;
         top: 50%;
-        right: 0;
+        right: 1rem;
         transform: translateY(-50%);
-        background: rgba(255, 63, 46, 0.3);
+        background: #ffffff7a;
         border-radius: 50px;
         padding: 10px;
       }
@@ -113,7 +117,6 @@
         gap: 10px;
       }
     }
-
     @media (max-width: 991px) {
       nav.navbar-side {
         background: #0C0930;
@@ -136,11 +139,6 @@
         margin: 0 0 4px 0;
       }
     }
-
-    /* Offset main content for top bar */
-    #main {
-      padding-top: 60px;
-    }
   </style>
 </head>
 <body class="is-preload">
@@ -153,7 +151,6 @@
     <div class="section-title" id="sectionTitle">Welcome</div>
   </div>
 
-  <!-- Header -->
   <header id="header">
     <div class="inner">
       <a href="#" class="image avatar"><img src="images/bariinfo.jpg" alt="" /></a>
@@ -246,7 +243,7 @@
 
 	</div>
 
-  <!-- Nav Bar -->
+
   <nav class="navbar-side">
     <ul class="navbar-nav">
       <li><a href="#section-3d" class="nav-link"><svg class="icon" viewBox="0 0 24 24"><path d="M3 12l9-9 9 9-1.5 1.5L12 4.5 4.5 13.5z"/></svg><span>3D</span></a></li>
@@ -287,7 +284,7 @@
           const sectionHeight = section.clientHeight;
           if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
             current = section.getAttribute("id");
-            let newTitle = section.dataset.title;
+            const newTitle = section.dataset.title;
             if (newTitle !== currentTitle) {
               sectionTitle.style.opacity = 0;
               setTimeout(() => {
@@ -298,7 +295,6 @@
             }
           }
         });
-
         navLinks.forEach(link => {
           link.classList.remove("active");
           if (link.getAttribute("href") === `#${current}`) {
