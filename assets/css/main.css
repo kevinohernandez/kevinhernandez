@@ -16,7 +16,16 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 body {
 	line-height: 1;
+	-webkit-text-size-adjust: none;
+	-ms-overflow-style: none;  /* IE and Edge */
+  	scrollbar-width: none;  /* Firefox */
 }
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
 
 ol, ul {
 	list-style: none;
@@ -36,9 +45,7 @@ table {
 	border-spacing: 0;
 }
 
-body {
-	-webkit-text-size-adjust: none;
-}
+
 
 mark {
 	background-color: transparent;
@@ -59,16 +66,7 @@ input, select, textarea {
 
 /* Basic */
 
-/* Hide scrollbar for Chrome, Safari and Opera */
-body::-webkit-scrollbar {
-  display: none;
-}
 
-/* Hide scrollbar for IE, Edge and Firefox */
-body {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-}
 
 /* Remove bullets and style nav links in  */
 
