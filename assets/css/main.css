@@ -385,7 +385,7 @@ header nav ul li {
 		text-align: right;
 		top: 0;
 		width: 15%;
-		/justify-content: center;
+		justify-content: center;
     		align-items: center;
 
 	}
