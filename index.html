@@ -224,7 +224,7 @@
   <script src="assets/js/util.js"></script>
   <script src="assets/js/main.js"></script>
 
-  <script>
+<script>
   new Swiper('.section-3d-swiper', {
     slidesPerView: 1,
     spaceBetween: 10,
@@ -247,14 +247,16 @@
     breakpoints: { 768: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }
   });
 
-  $('section .swiper-slide a').poptrox({
-    caption: function($a) { return $a.find('.caption').text(); },
-    overlayColor: '#000',
-    overlayOpacity: 0.7,
-    popupCloserText: '',
-    popupLoaderText: '',
-    selector: 'a',
-    usePopupCaption: true,
+  $(function() {
+    $('section .swiper-slide a').poptrox({
+      caption: function($a) { return $a.find('.caption').text(); },
+      overlayColor: '#000',
+      overlayOpacity: 0.7,
+      popupCloserText: '',
+      popupLoaderText: '',
+      selector: 'a',
+      usePopupCaption: true
+    });
   });
 
   document.addEventListener("DOMContentLoaded", function () {
