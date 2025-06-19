@@ -287,51 +287,55 @@
       });
     });
 
-    document.addEventListener("DOMContentLoaded", function () {
-      const sections = document.querySelectorAll("section");
-      const navLinks = document.querySelectorAll("#header nav ul li a, .navbar-side .nav-link");
-      const sectionTitle = document.getElementById("sectionTitle");
-      let currentTitle = "Welcome";
+  document.addEventListener("DOMContentLoaded", function () {
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll("#header nav ul li a, .navbar-side .nav-link");
+    const sectionTitle = document.getElementById("sectionTitle");
+    let currentTitle = "";
 
-      window.addEventListener("scroll", () => {
-        let found = false;
+    function updateSectionTitleAndNav() {
+      let found = false;
+      sections.forEach(section => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= 150 && rect.bottom >= 150) {
+          const newTitle = section.dataset.title;
+          if (newTitle !== currentTitle) {
+            sectionTitle.style.opacity = 0;
+            setTimeout(() => {
+              sectionTitle.textContent = newTitle;
+              sectionTitle.style.opacity = 1;
+            }, 300);
+            currentTitle = newTitle;
+          }
+          found = true;
+        }
+      });
+      if (!found && currentTitle !== "Welcome") {
+        sectionTitle.style.opacity = 0;
+        setTimeout(() => {
+          sectionTitle.textContent = "Welcome";
+          sectionTitle.style.opacity = 1;
+        }, 300);
+        currentTitle = "Welcome";
+      }
+
+      navLinks.forEach(link => {
+        link.classList.remove("active");
         sections.forEach(section => {
           const rect = section.getBoundingClientRect();
           if (rect.top <= 150 && rect.bottom >= 150) {
-            const newTitle = section.dataset.title;
-            if (newTitle !== currentTitle) {
-              sectionTitle.style.opacity = 0;
-              setTimeout(() => {
-                sectionTitle.textContent = newTitle;
-                sectionTitle.style.opacity = 1;
-              }, 300);
-              currentTitle = newTitle;
+            if (link.getAttribute("href") === `#${section.id}`) {
+              link.classList.add("active");
             }
-            found = true;
           }
         });
-        if (!found && currentTitle !== "Welcome") {
-          sectionTitle.style.opacity = 0;
-          setTimeout(() => {
-            sectionTitle.textContent = "Welcome";
-            sectionTitle.style.opacity = 1;
-          }, 300);
-          currentTitle = "Welcome";
-        }
-
-        navLinks.forEach(link => {
-          link.classList.remove("active");
-          sections.forEach(section => {
-            const rect = section.getBoundingClientRect();
-            if (rect.top <= 150 && rect.bottom >= 150) {
-              if (link.getAttribute("href") === `#${section.id}`) {
-                link.classList.add("active");
-              }
-            }
-          });
-        });
       });
-    });
-  </script>
+    }
+
+    window.addEventListener("scroll", updateSectionTitleAndNav);
+    // Run it once on load
+    updateSectionTitleAndNav();
+  });
+</script>
 </body>
 </html>
