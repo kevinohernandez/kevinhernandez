@@ -246,7 +246,7 @@
       breakpoints: { 768: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }
     });
     $(function() {
-      $('.gallery').poptrox({
+      $('section .swiper-slide a').poptrox({
         caption: function($a) { return $a.find('.caption').text(); },
         overlayColor: '#000',
         overlayOpacity: 0.7,
