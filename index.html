@@ -1,253 +1,263 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-	<title>Kevin Hernandez</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="icon" type="image/png" href="images/LOGO-REVERSE.png" />
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<style>
-	html, body {
-  overscroll-behavior: none;
-}		
-	html {
-		scroll-behavior: smooth;
-	}
-	#header nav ul li a.active {
-		color: #000;
-	}
-	body::-webkit-scrollbar {
-		display: none;
-	}
-	body {
-		-ms-overflow-style: none;
-		scrollbar-width: auto;
-	}
-	.poptrox-overlay .poptrox-caption,
-	.thumb::after {
-		display: none !important;
-	}
-	nav.navbar-side {
-		text-transform: capitalize;
-		font-size: 14px;
-		font-weight: 400;
-	}
-	.navbar-nav {
-		list-style: none;
-		margin: 0;
-		padding: 0;
-	}
-	.navbar-nav li {
-		margin: 0;
-		padding: 0;
-	}
-	.navbar-nav .nav-link {
-		color: #fff;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		padding: 10px;
-		flex-direction: row;
-		text-align: center;
-	}
-	.navbar-nav .nav-link.active,
-	.navbar-nav .nav-link.show {
-		color: #000000;
-	}
-	a.nav-link:focus,
-	a.nav-link:hover {
-		color: #000000;
-	}
-	svg.icon {
-		width: 24px;
-		height: 24px;
-		margin: 0 6px 0 0;
-		fill: currentColor;
-	}
-	@media (min-width: 991px) {
-		nav.navbar-side {
-			position: fixed;
-			top: 50%;
-			right: 1rem;
-			transform: translateY(-50%);
-			background: #ffffff7a;
-			border-radius: 50px;
-			padding: 10px;
-		}
-		.navbar-nav {
-			display: flex;
-			flex-direction: column;
-			gap: 10px;
-		}
-	}
-	@media (max-width: 991px) {
-		nav.navbar-side {
-			background: #0C0930;
-			position: fixed;
-			bottom: 0;
-			width: 100%;
-			display: flex;
-			justify-content: space-evenly;
-			padding: 10px 0;
-		}
-		.navbar-nav {
-			flex-direction: row;
-			width: 100%;
-			justify-content: space-evenly;
-		}
-		.navbar-nav .nav-link {
-			flex-direction: column;
-		}
-		svg.icon {
-			margin: 0 0 4px 0;
-		}
-	}
-	</style>
+  <title>Kevin Hernandez</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="icon" type="image/png" href="images/LOGO-REVERSE.png" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+      overscroll-behavior: none;
+    }
+    body {
+      -ms-overflow-style: none;
+      scrollbar-width: auto;
+      overscroll-behavior: none;
+      margin: 0;
+      padding: 0;
+    }
+    body::-webkit-scrollbar {
+      display: none;
+    }
+    #header nav ul li a.active {
+      color: #000;
+    }
+    .poptrox-overlay .poptrox-caption,
+    .thumb::after {
+      display: none !important;
+    }
+
+    /* Top bar styles */
+    .top-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      background: #0C0930;
+      color: #fff;
+      z-index: 9999;
+      height: 50px;
+      align-items: center;
+      padding: 0 10px;
+    }
+    .top-bar .logo {
+      width: 30%;
+    }
+    .top-bar .logo img {
+      height: 40px;
+    }
+    .top-bar .section-title {
+      width: 70%;
+      font-size: 18px;
+      text-align: right;
+      padding-right: 10px;
+      opacity: 1;
+      transition: opacity 0.6s ease;
+    }
+
+    /* Nav bar styles */
+    nav.navbar-side {
+      text-transform: capitalize;
+      font-size: 14px;
+      font-weight: 400;
+    }
+    .navbar-nav {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .navbar-nav li {
+      margin: 0;
+      padding: 0;
+    }
+    .navbar-nav .nav-link {
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      flex-direction: row;
+      text-align: center;
+    }
+    .navbar-nav .nav-link.active,
+    .navbar-nav .nav-link.show {
+      color: #FF3F2E;
+    }
+    a.nav-link:focus,
+    a.nav-link:hover {
+      color: #FF3F2E;
+    }
+    svg.icon {
+      width: 24px;
+      height: 24px;
+      margin: 0 6px 0 0;
+      fill: currentColor;
+    }
+
+    @media (min-width: 991px) {
+      nav.navbar-side {
+        position: fixed;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        background: rgba(255, 63, 46, 0.3);
+        border-radius: 50px;
+        padding: 10px;
+      }
+      .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+
+    @media (max-width: 991px) {
+      nav.navbar-side {
+        background: #0C0930;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        padding: 10px 0;
+      }
+      .navbar-nav {
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-evenly;
+      }
+      .navbar-nav .nav-link {
+        flex-direction: column;
+      }
+      svg.icon {
+        margin: 0 0 4px 0;
+      }
+    }
+
+    /* Offset main content for top bar */
+    #main {
+      padding-top: 60px;
+    }
+  </style>
 </head>
 <body class="is-preload">
 
-	<header id="header">
-		<div class="inner">
-			<a href="#" class="image avatar"><img src="images/bariinfo.jpg" alt="" /></a>
-			<ul class="icons">
-				<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-				<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-				<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-				<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-			</ul>
-			<h1><strong>Hi, I'm Kevin Hernandez</strong></h1>
-			<nav>
-				<ul>
-					<li><a href="#section-3d">3D/Motion Graphics</a></li>
-					<li><a href="#section-images">Images</a></li>
-					<li><a href="#section-product">Product Design</a></li>
-				</ul>
-			</nav>
-		</div>
-	</header>
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="logo">
+      <img src="images/LOGO-REVERSE.png" alt="Logo">
+    </div>
+    <div class="section-title" id="sectionTitle">Welcome</div>
+  </div>
 
-	<div id="main">
+  <!-- Header -->
+  <header id="header">
+    <div class="inner">
+      <a href="#" class="image avatar"><img src="images/bariinfo.jpg" alt="" /></a>
+      <ul class="icons">
+        <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+        <li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+        <li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+        <li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+      </ul>
+      <h1><strong>Hi, I'm Kevin Hernandez</strong></h1>
+      <nav>
+        <ul>
+          <li><a href="#section-3d">3D/Motion Graphics</a></li>
+          <li><a href="#section-images">Images</a></li>
+          <li><a href="#section-product">Product Design</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-		<section id="section-3d">
-			<div class="row gallery">
-				<article class="col-6 col-12-xsmall work-item">
-					<a href="images/fulls/01.jpg" class="image fit thumb"><img src="images/thumbs/01.jpg" alt="" /><span class="caption">Magna sed consequat tempus</span></a>
-				</article>
-				<article class="col-6 col-12-xsmall work-item">
-					<a href="images/fulls/02.jpg" class="image fit thumb"><img src="images/thumbs/02.jpg" alt="" /><span class="caption">Ultricies lacinia interdum</span></a>
-				</article>
-				<article class="col-6 col-12-xsmall work-item">
-					<a href="images/fulls/03.jpg" class="image fit thumb"><img src="images/thumbs/03.jpg" alt="" /><span class="caption">Tortor metus commodo</span></a>
-				</article>
-				<article class="col-6 col-12-xsmall work-item">
-					<a href="images/fulls/04.jpg" class="image fit thumb"><img src="images/thumbs/04.jpg" alt="" /><span class="caption">Quam neque phasellus</span></a>
-				</article>
-				<article class="col-6 col-12-xsmall work-item">
-					<a href="images/fulls/05.jpg" class="image fit thumb"><img src="images/thumbs/05.jpg" alt="" /><span class="caption">Nunc enim commodo aliquet</span></a>
-				</article>
-				<article class="col-6 col-12-xsmall work-item">
-					<a href="images/fulls/06.jpg" class="image fit thumb"><img src="images/thumbs/06.jpg" alt="" /><span class="caption">Risus ornare lacinia</span></a>
-				</article>
-			</div>
-		</section>
+  <!-- Main -->
+  <div id="main">
 
-		<section id="section-images">
-			<div class="row gallery">
-				<article class="col-6 col-12-xsmall work-item">
-					<a href="images/fulls/01.jpg" class="image fit thumb"><img src="images/thumbs/01.jpg" alt="" /><span class="caption">Placeholder caption</span></a>
-				</article>
-				<article class="col-6 col-12-xsmall work-item">
-					<a href="images/fulls/02.jpg" class="image fit thumb"><img src="images/thumbs/02.jpg" alt="" /><span class="caption">Placeholder caption</span></a>
-				</article>
-				<article class="col-6 col-12-xsmall work-item">
-					<a href="images/fulls/03.jpg" class="image fit thumb"><img src="images/thumbs/03.jpg" alt="" /><span class="caption">Placeholder caption</span></a>
-				</article>
-				<article class="col-6 col-12-xsmall work-item">
-					<a href="images/fulls/04.jpg" class="image fit thumb"><img src="images/thumbs/04.jpg" alt="" /><span class="caption">Placeholder caption</span></a>
-				</article>
-				<article class="col-6 col-12-xsmall work-item">
-					<a href="images/fulls/05.jpg" class="image fit thumb"><img src="images/thumbs/05.jpg" alt="" /><span class="caption">Placeholder caption</span></a>
-				</article>
-				<article class="col-6 col-12-xsmall work-item">
-					<a href="images/fulls/06.jpg" class="image fit thumb"><img src="images/thumbs/06.jpg" alt="" /><span class="caption">Placeholder caption</span></a>
-				</article>
-			</div>
-		</section>
+    <section id="section-3d" data-title="3D/Motion Graphics">
+      <div class="row gallery">
+        <!-- gallery items -->
+      </div>
+    </section>
 
-		<section id="section-product">
-			<div class="row gallery">
-				<article class="col-6 col-12-xsmall work-item">
-					<a href="images/fulls/01.jpg" class="image fit thumb"><img src="images/thumbs/01.jpg" alt="" /><span class="caption">Placeholder caption</span></a>
-				</article>
-				<article class="col-6 col-12-xsmall work-item">
-					<a href="images/fulls/02.jpg" class="image fit thumb"><img src="images/thumbs/02.jpg" alt="" /><span class="caption">Placeholder caption</span></a>
-				</article>
-				<article class="col-6 col-12-xsmall work-item">
-					<a href="images/fulls/03.jpg" class="image fit thumb"><img src="images/thumbs/03.jpg" alt="" /><span class="caption">Placeholder caption</span></a>
-				</article>
-				<article class="col-6 col-12-xsmall work-item">
-					<a href="images/fulls/04.jpg" class="image fit thumb"><img src="images/thumbs/04.jpg" alt="" /><span class="caption">Placeholder caption</span></a>
-				</article>
-				<article class="col-6 col-12-xsmall work-item">
-					<a href="images/fulls/05.jpg" class="image fit thumb"><img src="images/thumbs/05.jpg" alt="" /><span class="caption">Placeholder caption</span></a>
-				</article>
-				<article class="col-6 col-12-xsmall work-item">
-					<a href="images/fulls/06.jpg" class="image fit thumb"><img src="images/thumbs/06.jpg" alt="" /><span class="caption">Placeholder caption</span></a>
-				</article>
-			</div>
-		</section>
+    <section id="section-images" data-title="Images">
+      <div class="row gallery">
+        <!-- gallery items -->
+      </div>
+    </section>
 
-	</div>
+    <section id="section-product" data-title="Product Design">
+      <div class="row gallery">
+        <!-- gallery items -->
+      </div>
+    </section>
 
-	<nav class="navbar-side">
-		<ul class="navbar-nav">
-			<li><a href="#section-3d" class="nav-link"><svg class="icon" viewBox="0 0 24 24"><path d="M3 12l9-9 9 9-1.5 1.5L12 4.5 4.5 13.5z"/></svg><span>3D</span></a></li>
-			<li><a href="#section-images" class="nav-link"><svg class="icon" viewBox="0 0 24 24"><path d="M21 19V5H3v14h18zm0-16c1.1 0 2 .9 2 2v14c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V5c0-1.1.9-2 2-2h18z"/></svg><span>Images</span></a></li>
-			<li><a href="#section-product" class="nav-link"><svg class="icon" viewBox="0 0 24 24"><path d="M12 2l10 9h-5v11H7V11H2z"/></svg><span>Product</span></a></li>
-			<li><a href="#about" class="nav-link"><svg class="icon" viewBox="0 0 24 24"><path d="M12 12c2.7 0 5-2.3 5-5s-2.3-5-5-5-5 2.3-5 5 2.3 5 5 5zm0 2c-3.3 0-10 1.7-10 5v3h20v-3c0-3.3-6.7-5-10-5z"/></svg><span>About</span></a></li>
-			<li><a href="#contact" class="nav-link"><svg class="icon" viewBox="0 0 24 24"><path d="M21 8V7l-3 2-2-2-4 4-4-4-2 2-3-2v1l3 2-3 2v1l3-2 2 2 4-4 4 4 2-2 3 2v-1l-3-2 3-2z"/></svg><span>Contact</span></a></li>
-			<li><a href="#blog" class="nav-link"><svg class="icon" viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/></svg><span>Blog</span></a></li>
-		</ul>
-	</nav>
+  </div>
 
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.poptrox.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
-	<script>
-		$(function() {
-			$('.gallery').poptrox({
-				caption: function($a) { return $a.find('.caption').text(); },
-				overlayColor: '#000',
-				overlayOpacity: 0.7,
-				popupCloserText: '',
-				popupLoaderText: '',
-				selector: 'a',
-				usePopupCaption: true,
-			});
-		});
-		document.addEventListener("DOMContentLoaded", function () {
-			const sections = document.querySelectorAll("#section-3d, #section-images, #section-product");
-			const navLinks = document.querySelectorAll("#header nav ul li a, .navbar-side .nav-link");
-			window.addEventListener("scroll", () => {
-				let current = "";
-				sections.forEach(section => {
-					const sectionTop = section.offsetTop - 100;
-					const sectionHeight = section.clientHeight;
-					if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-						current = section.getAttribute("id");
-					}
-				});
-				navLinks.forEach(link => {
-					link.classList.remove("active");
-					if (link.getAttribute("href") === `#${current}`) {
-						link.classList.add("active");
-					}
-				});
-			});
-		});
-	</script>
+  <!-- Nav Bar -->
+  <nav class="navbar-side">
+    <ul class="navbar-nav">
+      <li><a href="#section-3d" class="nav-link"><svg class="icon" viewBox="0 0 24 24"><path d="M3 12l9-9 9 9-1.5 1.5L12 4.5 4.5 13.5z"/></svg><span>3D</span></a></li>
+      <li><a href="#section-images" class="nav-link"><svg class="icon" viewBox="0 0 24 24"><path d="M21 19V5H3v14h18zm0-16c1.1 0 2 .9 2 2v14c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V5c0-1.1.9-2 2-2h18z"/></svg><span>Images</span></a></li>
+      <li><a href="#section-product" class="nav-link"><svg class="icon" viewBox="0 0 24 24"><path d="M12 2l10 9h-5v11H7V11H2z"/></svg><span>Product</span></a></li>
+    </ul>
+  </nav>
+
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.poptrox.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    $(function() {
+      $('.gallery').poptrox({
+        caption: function($a) { return $a.find('.caption').text(); },
+        overlayColor: '#000',
+        overlayOpacity: 0.7,
+        popupCloserText: '',
+        popupLoaderText: '',
+        selector: 'a',
+        usePopupCaption: true,
+      });
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const sections = document.querySelectorAll("section");
+      const navLinks = document.querySelectorAll("#header nav ul li a, .navbar-side .nav-link");
+      const sectionTitle = document.getElementById("sectionTitle");
+      let currentTitle = "Welcome";
+
+      window.addEventListener("scroll", () => {
+        let current = "";
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop - 100;
+          const sectionHeight = section.clientHeight;
+          if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+            current = section.getAttribute("id");
+            let newTitle = section.dataset.title;
+            if (newTitle !== currentTitle) {
+              sectionTitle.style.opacity = 0;
+              setTimeout(() => {
+                sectionTitle.textContent = newTitle;
+                sectionTitle.style.opacity = 1;
+              }, 300);
+              currentTitle = newTitle;
+            }
+          }
+        });
+
+        navLinks.forEach(link => {
+          link.classList.remove("active");
+          if (link.getAttribute("href") === `#${current}`) {
+            link.classList.add("active");
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
