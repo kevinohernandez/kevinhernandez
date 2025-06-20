@@ -94,6 +94,7 @@ header nav ul {
 	text-transform: uppercase;
 	white-space: nowrap;
 	justify-items: anchor-center;
+	text-align: left;
 }
 
 header nav ul li {
