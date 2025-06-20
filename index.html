@@ -303,17 +303,19 @@
       });
     });
 
-    // Add trackpad/mouse wheel horizontal scroll for desktop
+    // Horizontal trackpad scroll on desktop
     if (window.innerWidth > 1024) {
       document.querySelectorAll('.swiper').forEach(swiperEl => {
         swiperEl.addEventListener('wheel', function(e) {
-          e.preventDefault();
-          const swiperInstance = swiperEl.swiper;
-          if (swiperInstance) {
-            if (e.deltaY > 0) {
-              swiperInstance.slideNext();
-            } else if (e.deltaY < 0) {
-              swiperInstance.slidePrev();
+          if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) {
+            e.preventDefault();
+            const swiperInstance = swiperEl.swiper;
+            if (swiperInstance) {
+              if (e.deltaX > 0) {
+                swiperInstance.slideNext();
+              } else if (e.deltaX < 0) {
+                swiperInstance.slidePrev();
+              }
             }
           }
         }, { passive: false });
@@ -321,6 +323,7 @@
     }
   });
 </script>
+
 
 
 </body>
