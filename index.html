@@ -163,19 +163,66 @@
 .swiper-pagination-bullet-active {
   background-image: url('images/outlinever-02.svg');
 }
+////////////////////////////////////////////////////////////////
+	  
 
 .about-me {
-  padding: 100px 20px 50px 20px;
-  text-align: center;
-  background: #fff; /* or transparent or your preferred color */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 150px 20px 100px;
+  background: #fff;
+  overflow: hidden;
 }
 
-.about-container h1 {
+.about-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  max-width: 900px;
+}
+
+.about-shape {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle at 30% 30%, #0000001a, transparent 70%);
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.about-shape::before {
+  content: "";
+  position: absolute;
+  top: -20%;
+  left: -20%;
+  width: 140%;
+  height: 140%;
+  background: #f0f0f0;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.about-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.about-text {
+  text-align: center;
+}
+
+.about-text h1 {
   font-size: 3rem;
   margin-bottom: 20px;
 }
 
-.about-container p {
+.about-text p {
   font-size: 1.2rem;
   max-width: 600px;
   margin: 0 auto;
@@ -192,18 +239,34 @@
   transform: translateY(0);
 }
 
+@media (min-width: 768px) {
+  .about-wrapper {
+    flex-direction: row;
+    gap: 50px;
+  }
+
+  .about-text {
+    text-align: left;
+  }
+}
+
 	  
   </style>
 </head>
 <body class="is-preload">
 
-  <!-- ABOUT ME SECTION -->
-  <section id="about-me" class="about-me">
-    <div class="about-container">
+ <section id="about-me" class="about-me">
+  <div class="about-wrapper">
+    <div class="about-shape">
+      <img src="images/profile.jpg" alt="Kevin Hernandez portrait" class="about-image">
+    </div>
+    <div class="about-text">
       <h1 class="reveal">Kevin Hernandez</h1>
       <p class="reveal">I am a designer passionate about geometric and technical aesthetics. Welcome to my portfolio.</p>
     </div>
-  </section>
+  </div>
+</section>
+
 	
   <header id="header">
     <div class="inner">
