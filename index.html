@@ -113,7 +113,7 @@
       svg.icon {
         margin: 0 0 4px 0;
       }
-    } /* END OF MEDIA */
+    } /* END OF MEDIA FOR MOBILE */
 	    
     .swiper { padding-bottom: 40px; }
 /* Change Swiper navigation arrows color */
@@ -136,8 +136,13 @@
 .swiper-button-next, .swiper-button-prev {
 	position: absolute !important;
 	top: var(--swiper-navigation-top-offset,40%)!important;
+	
 }
-    
+
+.swiper-button-next:after, .swiper-button-prev:after {
+	line-height: 5;
+	}
+	  
   </style>
 </head>
 <body class="is-preload">
