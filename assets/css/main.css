@@ -371,7 +371,7 @@ header nav ul li {
 		justify-content: space-between;
 		/background-color: #fff;
 		/background-color:#94978B;
-		background:#cccccc;
+		/background:#cccccc;
 		background-attachment: scroll,								scroll;
 		/background-image: url("images/overlay.png"), url("../../images/bg.jpg");
 		background-position: top left,							top left;
