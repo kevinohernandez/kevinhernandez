@@ -163,11 +163,48 @@
 .swiper-pagination-bullet-active {
   background-image: url('images/outlinever-02.svg');
 }
+
+.about-me {
+  padding: 100px 20px 50px 20px;
+  text-align: center;
+  background: #fff; /* or transparent or your preferred color */
+}
+
+.about-container h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.about-container p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1.5s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 	  
   </style>
 </head>
 <body class="is-preload">
 
+  <!-- ABOUT ME SECTION -->
+  <section id="about-me" class="about-me">
+    <div class="about-container">
+      <h1 class="reveal">Kevin Hernandez</h1>
+      <p class="reveal">I am a designer passionate about geometric and technical aesthetics. Welcome to my portfolio.</p>
+    </div>
+  </section>
+	
   <header id="header">
     <div class="inner">
       <a href="#" class="image avatar">
@@ -271,84 +308,99 @@
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
 
-<script>
-  const swiper3D = new Swiper('.section-3d-swiper', {
-    slidesPerView: 1,
-    spaceBetween: 10,
-    navigation: { nextEl: '.section-3d-swiper .swiper-button-next', prevEl: '.section-3d-swiper .swiper-button-prev' },
-    pagination: { el: '.section-3d-swiper .swiper-pagination', clickable: true },
-    breakpoints: { 768: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }
-  });
-
-  const swiperTypography = new Swiper('.section-typography-swiper', {
-    slidesPerView: 1,
-    spaceBetween: 10,
-    navigation: { nextEl: '.section-typography-swiper .swiper-button-next', prevEl: '.section-typography-swiper .swiper-button-prev' },
-    pagination: { el: '.section-typography-swiper .swiper-pagination', clickable: true },
-    breakpoints: { 768: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }
-  });
-
-  const swiperProduct = new Swiper('.section-product-swiper', {
-    slidesPerView: 1,
-    spaceBetween: 10,
-    navigation: { nextEl: '.section-product-swiper .swiper-button-next', prevEl: '.section-product-swiper .swiper-button-prev' },
-    pagination: { el: '.section-product-swiper .swiper-pagination', clickable: true },
-    breakpoints: { 768: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }
-  });
-
-  $(function() {
-    $('section .swiper-slide a').poptrox({
-      caption: function($a) { return $a.find('.caption').text(); },
-      overlayColor: '#000',
-      overlayOpacity: 0.7,
-      popupCloserText: '',
-      popupLoaderText: '',
-      selector: 'a',
-      usePopupCaption: true
+ <script>
+    const swiper3D = new Swiper('.section-3d-swiper', {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      navigation: { nextEl: '.section-3d-swiper .swiper-button-next', prevEl: '.section-3d-swiper .swiper-button-prev' },
+      pagination: { el: '.section-3d-swiper .swiper-pagination', clickable: true },
+      breakpoints: { 768: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }
     });
-  });
 
-  document.addEventListener("DOMContentLoaded", function () {
-    const sections = document.querySelectorAll("#section-3d, #section-typography, #section-product");
-    const navLinks = document.querySelectorAll("#header nav ul li a, .navbar-side .nav-link");
+    const swiperTypography = new Swiper('.section-typography-swiper', {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      navigation: { nextEl: '.section-typography-swiper .swiper-button-next', prevEl: '.section-typography-swiper .swiper-button-prev' },
+      pagination: { el: '.section-typography-swiper .swiper-pagination', clickable: true },
+      breakpoints: { 768: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }
+    });
 
-    window.addEventListener("scroll", () => {
-      let current = "";
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop - 100;
-        const sectionHeight = section.clientHeight;
-        if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-          current = section.getAttribute("id");
-        }
-      });
-      navLinks.forEach(link => {
-        link.classList.remove("active");
-        if (link.getAttribute("href") === `#${current}`) {
-          link.classList.add("active");
-        }
+    const swiperProduct = new Swiper('.section-product-swiper', {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      navigation: { nextEl: '.section-product-swiper .swiper-button-next', prevEl: '.section-product-swiper .swiper-button-prev' },
+      pagination: { el: '.section-product-swiper .swiper-pagination', clickable: true },
+      breakpoints: { 768: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }
+    });
+
+    $(function() {
+      $('section .swiper-slide a').poptrox({
+        caption: function($a) { return $a.find('.caption').text(); },
+        overlayColor: '#000',
+        overlayOpacity: 0.7,
+        popupCloserText: '',
+        popupLoaderText: '',
+        selector: 'a',
+        usePopupCaption: true
       });
     });
 
-    // Horizontal trackpad scroll on desktop
-    if (window.innerWidth > 1024) {
-      document.querySelectorAll('.swiper').forEach(swiperEl => {
-        swiperEl.addEventListener('wheel', function(e) {
-          if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) {
-            e.preventDefault();
-            const swiperInstance = swiperEl.swiper;
-            if (swiperInstance) {
-              if (e.deltaX > 0) {
-                swiperInstance.slideNext();
-              } else if (e.deltaX < 0) {
-                swiperInstance.slidePrev();
+    document.addEventListener("DOMContentLoaded", function () {
+      const sections = document.querySelectorAll("#section-3d, #section-typography, #section-product");
+      const navLinks = document.querySelectorAll("#header nav ul li a, .navbar-side .nav-link");
+
+      window.addEventListener("scroll", () => {
+        let current = "";
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop - 100;
+          const sectionHeight = section.clientHeight;
+          if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+            current = section.getAttribute("id");
+          }
+        });
+        navLinks.forEach(link => {
+          link.classList.remove("active");
+          if (link.getAttribute("href") === `#${current}`) {
+            link.classList.add("active");
+          }
+        });
+      });
+
+      // Horizontal trackpad scroll on desktop
+      if (window.innerWidth > 1024) {
+        document.querySelectorAll('.swiper').forEach(swiperEl => {
+          swiperEl.addEventListener('wheel', function(e) {
+            if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) {
+              e.preventDefault();
+              const swiperInstance = swiperEl.swiper;
+              if (swiperInstance) {
+                if (e.deltaX > 0) {
+                  swiperInstance.slideNext();
+                } else if (e.deltaX < 0) {
+                  swiperInstance.slidePrev();
+                }
               }
             }
+          }, { passive: false });
+        });
+      }
+
+      // ABOUT ME reveal
+      const reveals = document.querySelectorAll(".reveal");
+      function handleReveal() {
+        reveals.forEach(el => {
+          const windowHeight = window.innerHeight;
+          const elementTop = el.getBoundingClientRect().top;
+          const revealPoint = 150;
+          if (elementTop < windowHeight - revealPoint) {
+            el.classList.add("visible");
           }
-        }, { passive: false });
-      });
-    }
-  });
-</script>
+        });
+      }
+      window.addEventListener("scroll", handleReveal);
+      handleReveal();
+    });
+  </script>
 
 
 
