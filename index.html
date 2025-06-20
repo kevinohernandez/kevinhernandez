@@ -246,21 +246,23 @@
 <script src="assets/js/main.js"></script>
 
 <script>
-  new Swiper('.section-3d-swiper', {
+  const swiper3D = new Swiper('.section-3d-swiper', {
     slidesPerView: 1,
     spaceBetween: 10,
     navigation: { nextEl: '.section-3d-swiper .swiper-button-next', prevEl: '.section-3d-swiper .swiper-button-prev' },
     pagination: { el: '.section-3d-swiper .swiper-pagination', clickable: true },
     breakpoints: { 768: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }
   });
-  new Swiper('.section-typography-swiper', {
+
+  const swiperTypography = new Swiper('.section-typography-swiper', {
     slidesPerView: 1,
     spaceBetween: 10,
     navigation: { nextEl: '.section-typography-swiper .swiper-button-next', prevEl: '.section-typography-swiper .swiper-button-prev' },
     pagination: { el: '.section-typography-swiper .swiper-pagination', clickable: true },
     breakpoints: { 768: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }
   });
-  new Swiper('.section-product-swiper', {
+
+  const swiperProduct = new Swiper('.section-product-swiper', {
     slidesPerView: 1,
     spaceBetween: 10,
     navigation: { nextEl: '.section-product-swiper .swiper-button-next', prevEl: '.section-product-swiper .swiper-button-prev' },
@@ -283,6 +285,7 @@
   document.addEventListener("DOMContentLoaded", function () {
     const sections = document.querySelectorAll("#section-3d, #section-typography, #section-product");
     const navLinks = document.querySelectorAll("#header nav ul li a, .navbar-side .nav-link");
+
     window.addEventListener("scroll", () => {
       let current = "";
       sections.forEach(section => {
@@ -299,8 +302,26 @@
         }
       });
     });
+
+    // Add trackpad/mouse wheel horizontal scroll for desktop
+    if (window.innerWidth > 1024) {
+      document.querySelectorAll('.swiper').forEach(swiperEl => {
+        swiperEl.addEventListener('wheel', function(e) {
+          e.preventDefault();
+          const swiperInstance = swiperEl.swiper;
+          if (swiperInstance) {
+            if (e.deltaY > 0) {
+              swiperInstance.slideNext();
+            } else if (e.deltaY < 0) {
+              swiperInstance.slidePrev();
+            }
+          }
+        }, { passive: false });
+      });
+    }
   });
 </script>
+
 
 </body>
 </html>
