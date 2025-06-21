@@ -388,8 +388,7 @@ header nav ul li {
 		width: 15%;
 		justify-content: center;
     		align-items: center;
-		border: ridge;
-
+		border-right: ridge;
 	}
 
 		 > * {
