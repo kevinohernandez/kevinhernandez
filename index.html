@@ -281,7 +281,31 @@
   }
 }
 
-	  
+.gallery-section {
+  position: relative;
+}
+
+.section-title {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #000;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 4px 10px;
+  border-radius: 4px;
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1rem;
+    top: 5px;
+    right: 10px;
+    padding: 2px 6px;
+  }
+}	  
   </style>
 </head>
 <body class="is-preload">
@@ -334,6 +358,7 @@
   <div id="main">
 
     <section id="section-3d">
+	  <div class="section-title">3D / Motion Graphics</div>	    
       <div class="swiper section-3d-swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide"><a href="images/fulls/01.jpg" class="image fit thumb"><img src="images/thumbs/01.jpg" alt="" /><span class="caption">Magna sed consequat tempus</span></a></div>
@@ -350,6 +375,7 @@
     </section>
 
     <section id="section-typography">
+	<div class="section-title">Typography</div>
       <div class="swiper section-typography-swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide"><a href="images/fulls/01.jpg" class="image fit thumb"><img src="images/thumbs/01.jpg" alt="" /><span class="caption">Placeholder caption</span></a></div>
@@ -366,6 +392,7 @@
     </section>
 
     <section id="section-product">
+	<div class="section-title">Product Design</div>
       <div class="swiper section-product-swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide"><a href="images/fulls/01.jpg" class="image fit thumb"><img src="images/thumbs/01.jpg" alt="" /><span class="caption">Placeholder caption</span></a></div>
