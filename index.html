@@ -198,7 +198,7 @@ display:flex;
   bottom: 8px;
   left: 8px;
   /background: rgba(0,0,0,0.6);
-  /background: rgb(132 128 128 / 60%);	
+  background: rgb(132 128 128 / 60%);	
   color: #fff;
   padding: 4px 8px;
   font-size: 12px;
@@ -216,7 +216,16 @@ display:flex;
 .image.fit.thumb::after {
   display: none !important;
 }	  
-	  
+
+@media (min-width: 768px) {
+  .thumb {
+    transition: transform 0.3s ease;
+  }
+
+  .thumb:hover {
+    transform: translateY(-5px);
+  }
+}	  
 ////////////////////////////////////////////////////////////////
 
 #about-me{
