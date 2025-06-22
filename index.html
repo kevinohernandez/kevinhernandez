@@ -322,14 +322,15 @@ display:flex;
 
 
 .reveal {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 2s ease, transform 2s ease;  /* Slower reveal */
+  opacity: 0!important;
+  transform: translateY(50px)!important;
+  transition: opacity 2s ease, transform 2s ease!important;  /* Slower reveal */
 }
 
 .reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
+  opacity: 1!important;
+  transform: translateY(0)!important;
+  color: black;	
 }
 	  
 @media (min-width: 768px) {
