@@ -320,18 +320,18 @@ display:flex;
   margin: 0 auto;
 }
 
+
 .reveal {
   opacity: 0;
-  transform: translateY(30px);
-  transition: all 1.5s ease;
-  color: black;	
+  transform: translateY(50px);
+  transition: opacity 2s ease, transform 2s ease;  /* Slower reveal */
 }
 
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
 }
-
+	  
 @media (min-width: 768px) {
   .about-wrapper {
     flex-direction: row;
