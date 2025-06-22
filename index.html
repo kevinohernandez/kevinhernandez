@@ -523,7 +523,7 @@ margin-left: 70px;
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
 
- <script>
+<script>
     const swiper3D = new Swiper('.section-3d-swiper', {
       slidesPerView: 1,
       spaceBetween: 10,
@@ -581,7 +581,6 @@ margin-left: 70px;
         });
       });
 
-      // Horizontal trackpad scroll on desktop
       if (window.innerWidth > 1024) {
         document.querySelectorAll('.swiper').forEach(swiperEl => {
           swiperEl.addEventListener('wheel', function(e) {
@@ -600,8 +599,16 @@ margin-left: 70px;
         });
       }
 
-      // ABOUT ME reveal
       const reveals = document.querySelectorAll(".reveal");
+      
+      // Auto reveal on page load with stagger
+      reveals.forEach((el, index) => {
+        setTimeout(() => {
+          el.classList.add("visible");
+        }, index * 300); // 300ms stagger between elements
+      });
+
+      // Keep scroll-based reveal active if you want both
       function handleReveal() {
         reveals.forEach(el => {
           const windowHeight = window.innerHeight;
@@ -615,7 +622,8 @@ margin-left: 70px;
       window.addEventListener("scroll", handleReveal);
       handleReveal();
     });
-  </script>
+</script>
+
 
 
 
