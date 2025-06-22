@@ -524,105 +524,91 @@ margin-left: 70px;
 <script src="assets/js/main.js"></script>
 
 <script>
-    const swiper3D = new Swiper('.section-3d-swiper', {
-      slidesPerView: 1,
-      spaceBetween: 10,
-      navigation: { nextEl: '.section-3d-swiper .swiper-button-next', prevEl: '.section-3d-swiper .swiper-button-prev' },
-      pagination: { el: '.section-3d-swiper .swiper-pagination', clickable: true },
-      breakpoints: { 768: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }
-    });
+  const swiper3D = new Swiper('.section-3d-swiper', {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    navigation: { nextEl: '.section-3d-swiper .swiper-button-next', prevEl: '.section-3d-swiper .swiper-button-prev' },
+    pagination: { el: '.section-3d-swiper .swiper-pagination', clickable: true },
+    breakpoints: { 768: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }
+  });
 
-    const swiperTypography = new Swiper('.section-typography-swiper', {
-      slidesPerView: 1,
-      spaceBetween: 10,
-      navigation: { nextEl: '.section-typography-swiper .swiper-button-next', prevEl: '.section-typography-swiper .swiper-button-prev' },
-      pagination: { el: '.section-typography-swiper .swiper-pagination', clickable: true },
-      breakpoints: { 768: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }
-    });
+  const swiperTypography = new Swiper('.section-typography-swiper', {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    navigation: { nextEl: '.section-typography-swiper .swiper-button-next', prevEl: '.section-typography-swiper .swiper-button-prev' },
+    pagination: { el: '.section-typography-swiper .swiper-pagination', clickable: true },
+    breakpoints: { 768: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }
+  });
 
-    const swiperProduct = new Swiper('.section-product-swiper', {
-      slidesPerView: 1,
-      spaceBetween: 10,
-      navigation: { nextEl: '.section-product-swiper .swiper-button-next', prevEl: '.section-product-swiper .swiper-button-prev' },
-      pagination: { el: '.section-product-swiper .swiper-pagination', clickable: true },
-      breakpoints: { 768: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }
-    });
+  const swiperProduct = new Swiper('.section-product-swiper', {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    navigation: { nextEl: '.section-product-swiper .swiper-button-next', prevEl: '.section-product-swiper .swiper-button-prev' },
+    pagination: { el: '.section-product-swiper .swiper-pagination', clickable: true },
+    breakpoints: { 768: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }
+  });
 
-    $(function() {
-      $('section .swiper-slide a').poptrox({
-        caption: function($a) { return $a.find('.caption').text(); },
-        overlayColor: '#000',
-        overlayOpacity: 0.7,
-        popupCloserText: '',
-        popupLoaderText: '',
-        selector: 'a',
-        usePopupCaption: true
+  $(function() {
+    $('section .swiper-slide a').poptrox({
+      caption: function($a) { return $a.find('.caption').text(); },
+      overlayColor: '#000',
+      overlayOpacity: 0.7,
+      popupCloserText: '',
+      popupLoaderText: '',
+      selector: 'a',
+      usePopupCaption: true
+    });
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const sections = document.querySelectorAll("#section-3d, #section-typography, #section-product");
+    const navLinks = document.querySelectorAll("#header nav ul li a, .navbar-side .nav-link");
+
+    window.addEventListener("scroll", () => {
+      let current = "";
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        const sectionHeight = section.clientHeight;
+        if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+          current = section.getAttribute("id");
+        }
+      });
+      navLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === `#${current}`) {
+          link.classList.add("active");
+        }
       });
     });
 
-    document.addEventListener("DOMContentLoaded", function () {
-      const sections = document.querySelectorAll("#section-3d, #section-typography, #section-product");
-      const navLinks = document.querySelectorAll("#header nav ul li a, .navbar-side .nav-link");
-
-      window.addEventListener("scroll", () => {
-        let current = "";
-        sections.forEach(section => {
-          const sectionTop = section.offsetTop - 100;
-          const sectionHeight = section.clientHeight;
-          if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-            current = section.getAttribute("id");
-          }
-        });
-        navLinks.forEach(link => {
-          link.classList.remove("active");
-          if (link.getAttribute("href") === `#${current}`) {
-            link.classList.add("active");
-          }
-        });
-      });
-
-      if (window.innerWidth > 1024) {
-        document.querySelectorAll('.swiper').forEach(swiperEl => {
-          swiperEl.addEventListener('wheel', function(e) {
-            if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) {
-              e.preventDefault();
-              const swiperInstance = swiperEl.swiper;
-              if (swiperInstance) {
-                if (e.deltaX > 0) {
-                  swiperInstance.slideNext();
-                } else if (e.deltaX < 0) {
-                  swiperInstance.slidePrev();
-                }
+    if (window.innerWidth > 1024) {
+      document.querySelectorAll('.swiper').forEach(swiperEl => {
+        swiperEl.addEventListener('wheel', function(e) {
+          if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) {
+            e.preventDefault();
+            const swiperInstance = swiperEl.swiper;
+            if (swiperInstance) {
+              if (e.deltaX > 0) {
+                swiperInstance.slideNext();
+              } else if (e.deltaX < 0) {
+                swiperInstance.slidePrev();
               }
             }
-          }, { passive: false });
-        });
-      }
-
-      const reveals = document.querySelectorAll(".reveal");
-      
-      // Auto reveal on page load with stagger
-      reveals.forEach((el, index) => {
-        setTimeout(() => {
-          el.classList.add("visible");
-        }, index * 300); // 300ms stagger between elements
-      });
-
-      // Keep scroll-based reveal active if you want both
-      function handleReveal() {
-        reveals.forEach(el => {
-          const windowHeight = window.innerHeight;
-          const elementTop = el.getBoundingClientRect().top;
-          const revealPoint = 150;
-          if (elementTop < windowHeight - revealPoint) {
-            el.classList.add("visible");
           }
-        });
-      }
-      window.addEventListener("scroll", handleReveal);
-      handleReveal();
+        }, { passive: false });
+      });
+    }
+
+    // About Me reveal: auto on load with stagger
+    const reveals = document.querySelectorAll(".reveal");
+    reveals.forEach((el, index) => {
+      setTimeout(() => {
+        el.classList.add("visible");
+      }, index * 300); // adjust delay between elements as needed
     });
+  });
 </script>
+
 
 
 
