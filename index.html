@@ -160,7 +160,14 @@ cursor: crosshair!important;
   width: auto!important;	
 left:unset!important;	
 display:flex;	
-}	  
+}	
+
+@media (max-width: 768px) {
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction  {
+flex-direction: column;	
+}	
+}/*@media (max-width: 768px) */	  
+	  
 /* Change Swiper pagination bullets color */
 .swiper-pagination-bullet {
   /background: #ffffff!important; /* Replace with your desired color */
