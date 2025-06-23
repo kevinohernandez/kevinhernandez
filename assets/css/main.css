@@ -579,7 +579,7 @@ header nav ul li {
 			text-align: center;
 			width: 100%;
 			z-index: 1;
-			display: none;
+			display: none!important;
 		}
 
 		.poptrox-popup .nav-next,
