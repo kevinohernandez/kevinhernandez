@@ -358,7 +358,7 @@ flex-direction: column;
 .reveal {
   opacity: 0!important;
   transform: translateY(50px)!important;
-  transition: opacity 2s ease, transform 2s ease!important;  /* Slower reveal */
+  transition: opacity 1s ease, transform 1s ease!important;  /* Slower reveal */
 }
 
 .reveal.visible {
@@ -644,9 +644,10 @@ margin-left: 20px;
             e.preventDefault();
             const swiperInstance = swiperEl.swiper;
             if (swiperInstance) {
-              if (e.deltaX > 0) {
+              const scaledDeltaX = e.deltaX / 3;
+              if (scaledDeltaX > 5) {
                 swiperInstance.slideNext();
-              } else if (e.deltaX < 0) {
+              } else if (scaledDeltaX < -5) {
                 swiperInstance.slidePrev();
               }
             }
@@ -660,7 +661,7 @@ margin-left: 20px;
     reveals.forEach((el, index) => {
       setTimeout(() => {
         el.classList.add("visible");
-      }, index * 300); // adjust delay between elements as needed
+      }, index * 300);
     });
   });
 </script>
