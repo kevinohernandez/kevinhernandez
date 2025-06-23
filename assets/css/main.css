@@ -818,7 +818,8 @@ header nav ul li {
 				text-align: center;
 				top: auto;
 				width: 100%;
-				display: block;
+				/display: block;
+				display:none;
 			}
 
 				#header h1 {
