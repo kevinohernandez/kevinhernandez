@@ -593,6 +593,8 @@ margin-left: 20px;
   const swiper3D = new Swiper('.section-3d-swiper', {
     slidesPerView: 1,
     spaceBetween: 10,
+    freeMode: true,
+    mousewheel: { forceToAxis: true },
     navigation: { nextEl: '.section-3d-swiper .swiper-button-next', prevEl: '.section-3d-swiper .swiper-button-prev' },
     pagination: { el: '.section-3d-swiper .swiper-pagination', clickable: true },
     breakpoints: { 768: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }
@@ -601,6 +603,8 @@ margin-left: 20px;
   const swiperTypography = new Swiper('.section-typography-swiper', {
     slidesPerView: 1,
     spaceBetween: 10,
+    freeMode: true,
+    mousewheel: { forceToAxis: true },
     navigation: { nextEl: '.section-typography-swiper .swiper-button-next', prevEl: '.section-typography-swiper .swiper-button-prev' },
     pagination: { el: '.section-typography-swiper .swiper-pagination', clickable: true },
     breakpoints: { 768: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }
@@ -609,6 +613,8 @@ margin-left: 20px;
   const swiperProduct = new Swiper('.section-product-swiper', {
     slidesPerView: 1,
     spaceBetween: 10,
+    freeMode: true,
+    mousewheel: { forceToAxis: true },
     navigation: { nextEl: '.section-product-swiper .swiper-button-next', prevEl: '.section-product-swiper .swiper-button-prev' },
     pagination: { el: '.section-product-swiper .swiper-pagination', clickable: true },
     breakpoints: { 768: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }
@@ -647,25 +653,6 @@ margin-left: 20px;
       });
     });
 
-    if (window.innerWidth > 1024) {
-      document.querySelectorAll('.swiper').forEach(swiperEl => {
-        swiperEl.addEventListener('wheel', function(e) {
-          if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) {
-            e.preventDefault();
-            const swiperInstance = swiperEl.swiper;
-            if (swiperInstance) {
-              const scaledDeltaX = e.deltaX / 3;
-              if (scaledDeltaX > 5) {
-                swiperInstance.slideNext();
-              } else if (scaledDeltaX < -5) {
-                swiperInstance.slidePrev();
-              }
-            }
-          }
-        }, { passive: false });
-      });
-    }
-
     // About Me reveal: auto on load with stagger
     const reveals = document.querySelectorAll(".reveal");
     reveals.forEach((el, index) => {
@@ -675,6 +662,7 @@ margin-left: 20px;
     });
   });
 </script>
+
 
 
 
