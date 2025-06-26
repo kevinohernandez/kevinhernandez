@@ -460,7 +460,7 @@ flex-direction: column;
     padding: 1rem;
     box-sizing: border-box;
     -webkit-overflow-scrolling: touch;
-    flex-wrap: nowrap; 
+    max-width: 100%; /* important: restrict to container */
   }
 
   .skill {
@@ -473,7 +473,7 @@ flex-direction: column;
   }
 
   .skill img {
-    width: 40px;
+    /width: 40px;
     height: 40px;
     object-fit: contain;
   }
@@ -482,9 +482,15 @@ flex-direction: column;
     font-size: 0.85rem;
     margin-top: 0.5rem;
     text-align: center;
-    white-space: normal;
+  }
+
+  /* prevent the parent section from scrolling */
+  .about-me {
+    overflow-x: hidden;
   }
 }
+
+
 
 	  
 .gallery-section {
