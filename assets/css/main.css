@@ -872,7 +872,8 @@ header nav ul li {
 
 			#main {
 				margin: 0;
-				padding: 6em 4em;
+				/padding: 6em 4em;
+				padding-bottom: 6rem;
 				width: 100%;
 			}
 
