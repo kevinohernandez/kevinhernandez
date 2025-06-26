@@ -389,7 +389,7 @@ header nav ul li {
 		justify-content: center;
     		align-items: center;
 		border-right: ridge;
-		display:none;
+		/display:none;
 	}
 
 		 > * {
@@ -436,10 +436,12 @@ header nav ul li {
 /* Main */
 
 	#main {
-		/margin-left: 15%;
+		margin-left: 15%;
+		width: calc(100% - 15%);
+		/width: calc(100% - 0%);
+		/margin-left: 0%;
 		/max-width: 54em;
 		/padding: 8em 4em 4em 4em;
-		width: calc(100% - 0%);
 		/border-left: 2.5px solid #000000;
 		/border: ridge;
 		margin-left: 0%;
