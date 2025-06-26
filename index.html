@@ -580,6 +580,40 @@ flex-direction: column;
   align-items: center;
 }
 
+.top-edge-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  background-color: #000; /* or your top bar color */
+}
+
+.center-nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.center-nav nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.center-nav nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.plus-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+}
 
 
 	  
@@ -590,8 +624,15 @@ flex-direction: column;
 <div class="about-container">
 <div class="about-edge top-edge">
 <div class="top-edge-nav">
- 
-
+	
+   <div class="plus-icon left-plus">
+    <!-- Left Plus SVG -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
+      <path d="M12 5v14M5 12h14" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+	
+  <div class="center-nav">
   <nav>
     <ul>
       <li><a href="#">About</a></li>    
@@ -602,6 +643,14 @@ flex-direction: column;
     </ul>
   </nav>
 </div>
+
+  <div class="plus-icon right-plus">
+    <!-- Right Plus SVG -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
+      <path d="M12 5v14M5 12h14" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+	
 </div>	
    <!--	
   <div class="about-edge bottom-edge"></div>
