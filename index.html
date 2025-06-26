@@ -478,7 +478,7 @@ flex-direction: column;
   z-index: 10;
   /pointer-events: none;
 }
-
+  @media (min-width: 991px) {
 /* Top edge */
 .about-edge.top-edge {
   top: 0;
@@ -521,7 +521,7 @@ clip-path: polygon(0 75%, 3% 100%, 33% 100%, 35% 85%, 65% 84%, 67% 100%, 97.5% 1
   background: #0000001a;
   /z-index: 1; /* Lower z-index so the nav can sit above */
 }
-  @media (min-width: 991px) {
+
 .top-edge-nav {
   position: absolute;
   top: 0;
@@ -535,7 +535,7 @@ clip-path: polygon(0 75%, 3% 100%, 33% 100%, 35% 85%, 65% 84%, 67% 100%, 97.5% 1
   backdrop-filter: blur(5px);	
  -webkit-backdrop-filter: blur(5px);	
 }
-  }
+  
 .top-edge-nav nav ul {
   display: flex;
   gap: 1rem;
@@ -550,7 +550,7 @@ clip-path: polygon(0 75%, 3% 100%, 33% 100%, 35% 85%, 65% 84%, 67% 100%, 97.5% 1
   /font-weight: bold;
   font-variant: all-small-caps;	
 }
-
+  }/* TOP BAR FOR DESKTOP */
 	  
   </style>
 </head>
