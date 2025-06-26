@@ -488,15 +488,6 @@ flex-direction: column;
   /pointer-events: none;
 }
 	  
-/* Top edge */
-.about-edge.top-edge {
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 50px; /* adjust as needed */
-  position:fixed;
-  clip-path: polygon(0 75%, 3% 100%, 33% 100%, 35% 85%, 65% 84%, 67% 100%, 97.5% 100%, 100% 75%, 100% 25%, 100% 0%, 0% 0%, 0 15%);	
-}
 
 /* Bottom edge */
 .about-edge.bottom-edge {
@@ -523,6 +514,18 @@ flex-direction: column;
   height: 100%;
 }
 
+/* Top edge */
+.about-edge.top-edge {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px; /* adjust as needed */
+  position:fixed;
+  clip-path: polygon(0 75%, 3% 100%, 33% 100%, 35% 85%, 65% 84%, 67% 100%, 97.5% 100%, 100% 75%, 100% 25%, 100% 0%, 0% 0%, 0 15%);
+  backdrop-filter: blur(5px);	
+ -webkit-backdrop-filter: blur(5px);	
+}
+	
 .top-edge {
   position: relative; /* Ensure it contains its children */
   height: 50px; /* Adjust the height of your top bar */
@@ -541,8 +544,8 @@ flex-direction: column;
   justify-content: center;
   align-items: center;
   z-index: 2; /* Ensure nav is above the black bar */
-  backdrop-filter: blur(5px);	
- -webkit-backdrop-filter: blur(5px);	
+  /backdrop-filter: blur(5px);	
+ /-webkit-backdrop-filter: blur(5px);	
 }
   
 .top-edge-nav nav ul {
@@ -551,6 +554,7 @@ flex-direction: column;
   list-style: none;
   padding: 0;
   margin: 0;
+ font-size: larger;	
 }
 
 .top-edge-nav nav ul li a {
