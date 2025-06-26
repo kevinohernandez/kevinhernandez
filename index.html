@@ -708,7 +708,7 @@ margin-left: 20px;
 
   <nav class="navbar-side">
     <ul class="navbar-nav">
-      <li><a href="#about" class="nav-link"><svg class="icon" viewBox="0 0 24 24"><path d="M12 12c2.7 0 5-2.3 5-5s-2.3-5-5-5-5 2.3-5 5 2.3 5 5 5zm0 2c-3.3 0-10 1.7-10 5v3h20v-3c0-3.3-6.7-5-10-5z"/></svg><span>About</span></a></li>    
+      <li><a href="#" class="nav-link"><svg class="icon" viewBox="0 0 24 24"><path d="M12 12c2.7 0 5-2.3 5-5s-2.3-5-5-5-5 2.3-5 5 2.3 5 5 5zm0 2c-3.3 0-10 1.7-10 5v3h20v-3c0-3.3-6.7-5-10-5z"/></svg><span>About</span></a></li>    
       <li><a href="#section-3d" class="nav-link"><svg class="icon" viewBox="0 0 24 24"><path d="M3 12l9-9 9 9-1.5 1.5L12 4.5 4.5 13.5z"/></svg><span>3D</span></a></li>
       <li><a href="#section-typography" class="nav-link"><svg class="icon" viewBox="0 0 24 24"><path d="M21 19V5H3v14h18zm0-16c1.1 0 2 .9 2 2v14c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V5c0-1.1.9-2 2-2h18z"/></svg><span>Graphics</span></a></li>
       <li><a href="#section-product" class="nav-link"><svg class="icon" viewBox="0 0 24 24"><path d="M12 2l10 9h-5v11H7V11H2z"/></svg><span>Products</span></a></li>
@@ -783,7 +783,7 @@ margin-left: 20px;
     window.addEventListener("scroll", () => {
       let current = "";
       sections.forEach(section => {
-        const sectionTop = section.offsetTop - 200;
+	const sectionTop = section.offsetTop - window.innerHeight * 0.7;
         const sectionHeight = section.clientHeight;
         if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
           current = section.getAttribute("id");
