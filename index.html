@@ -118,7 +118,7 @@ cursor: crosshair!important;
     }
     @media (max-width: 991px) {
       nav.navbar-side {
-	background: #ffffffd9;       
+	/background: #ffffffd9;       
 	position: fixed;
         bottom: 0;
         width: 100%;
@@ -127,6 +127,8 @@ cursor: crosshair!important;
         padding: 10px 0;
         font-variant: all-petite-caps;
 	z-index: 2;
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);      
       }
       .navbar-nav {
         flex-direction: row;
@@ -519,7 +521,7 @@ clip-path: polygon(0 75%, 3% 100%, 33% 100%, 35% 85%, 65% 84%, 67% 100%, 97.5% 1
   background: #0000001a;
   /z-index: 1; /* Lower z-index so the nav can sit above */
 }
-
+  @media (min-width: 991px) {
 .top-edge-nav {
   position: absolute;
   top: 0;
@@ -533,7 +535,7 @@ clip-path: polygon(0 75%, 3% 100%, 33% 100%, 35% 85%, 65% 84%, 67% 100%, 97.5% 1
   backdrop-filter: blur(5px);	
  -webkit-backdrop-filter: blur(5px);	
 }
-
+  }
 .top-edge-nav nav ul {
   display: flex;
   gap: 1rem;
