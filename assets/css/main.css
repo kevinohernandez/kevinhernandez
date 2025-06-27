@@ -389,7 +389,7 @@ header nav ul li {
 		justify-content: center;
     		align-items: center;
 		/border-right: ridge;
-		border-right: solid;
+		border-right: 0.75px solid;
 		/display:none;
 	}
 
