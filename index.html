@@ -32,8 +32,8 @@ section {
 }
 
 section::after {
-  content: "|";
-background-image: url('images/outlinever-02.svg')!important;
+  /content: "|";
+  background-image: url('images/outlinever-02.svg')!important;
   background-repeat: no-repeat!important;
   background-position: center!important;
   background-size: contain!important;	
@@ -65,7 +65,14 @@ section::before {
 }
 #section-product::after{
 	display:none;
-}	  
+}	
+	  
+#about-me.about-me::before{
+bottom: 60px;
+}
+#about-me.about-me::after{
+bottom: 60px;
+}
 	  
 :root {
     --swiper-navigation-size: 12.5px;
