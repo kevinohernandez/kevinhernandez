@@ -24,6 +24,35 @@
   color: transparent;
   background: transparent;
 }
+
+section {
+  position: relative;
+  padding-bottom: 4rem; /* space for the border */
+  margin-bottom: 2rem;
+}
+
+section::after {
+  content: "+";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.5rem;
+  background-color: white; /* match your background */
+  padding: 0 0.5rem;
+  color: #000; /* or your accent color */
+}
+
+section::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  z-index: -1;
+}
+
 	  
 	  
 :root {
