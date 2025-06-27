@@ -33,6 +33,10 @@ section {
 
 section::after {
   content: "|";
+background-image: url('images/outlinever-02.svg')!important;
+  background-repeat: no-repeat!important;
+  background-position: center!important;
+  background-size: contain!important;	
   position: absolute;
  bottom: -63px;
     left: 50%;
@@ -55,7 +59,13 @@ section::before {
   z-index: -1;
 }
 
-	  
+
+#section-product::before{
+	display:none;
+}
+#section-product::after{
+	display:none;
+}	  
 	  
 :root {
     --swiper-navigation-size: 12.5px;
