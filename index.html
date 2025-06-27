@@ -34,22 +34,24 @@ section {
 section::after {
   content: "+";
   position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 1.5rem;
-  background-color: white; /* match your background */
-  padding: 0 0.5rem;
-  color: #000; /* or your accent color */
+ bottom: -63px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2.5rem;
+    /* background-color: white; */
+    padding: 0 0.5rem;
+    color: #000;
+    z-index: 2;
+
 }
 
 section::before {
   content: "";
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  border-bottom: 1px solid #ccc;
+ bottom: -50px;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid #000000;
   z-index: -1;
 }
 
