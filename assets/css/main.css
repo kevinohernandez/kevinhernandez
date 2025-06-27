@@ -164,7 +164,7 @@ header nav ul li {
 		-webkit-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		-ms-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-		border-bottom: dotted 1px;
+		/border-bottom: dotted 1px;
 		/color: #49bf9d;
 		color: #ffffff;
 		text-decoration: none;
@@ -449,7 +449,7 @@ header nav ul li {
 	}
 
 		#main > section {
-			/border-top: solid 2px #efefef;
+			border-top: solid 2px #efefef;
 			/margin: 4em 0 0 0;
 			padding: 4em 0 0 0;
 		}
